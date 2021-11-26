@@ -1,27 +1,59 @@
+
 pipeline{
-    agent any
 
+    agent any    
     tools{
-        maven "jenkins-mvn"
-    }
 
+        maven "jenkins-mvn"
+
+    }
+
+    environment{
+
+        tomcatWebLocation="\"C:\\shalini backp\\trainings\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\webapps\""
+        tomcatBinLocation="\"C:\\shalini backp\\trainings\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\bin\""
+
+        buildLocation="C:\\ProgramData\\Jenkins\\.jenkins\workspace\\dxc-maven-build-test\\mywebapp\\target\\mywebapp.war"
+
+    }
     stages{
+    stage('Git Checkout'){
 
-        stage('Git Checkout'){
-            steps{
-
+            steps{
             git 'https://github.com/codewithz/dxc-web-app.git'
-            }
-        }
 
+            }
+
+        }
         stage('Maven Build'){
-            steps{
-            bat """
-                cd mywebapp
-                mvn clean package
-            """
-            }
-        }
 
-    }
+            steps{
+
+            bat """
+
+                cd mywebapp
+
+                mvn clean package
+
+            """
+
+            }
+
+        }
+        }
+        post{
+
+        success{
+        bat """
+
+                copy %buildLocation%  %tomcatWebLocation%
+
+                %tomcatBinLocation%\\startup.bat
+
+            """         
+            }
+
+    }
+
 }
+
