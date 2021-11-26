@@ -23,7 +23,7 @@ pipeline{
 
 	post{
 	success{
-	 bat 'jar -jar %jarlocation%'
+	 bat 'java -jar %jarlocation%'
 	 }
 	 }
 }
