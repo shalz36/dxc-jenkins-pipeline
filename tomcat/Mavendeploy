@@ -5,9 +5,9 @@ pipeline{
         maven "jenkins-mvn"
     }
     environment{
-        tomcatWebLocation="\"D:\\Zartab\\Trainings\\DXC Jenkins Training Nov 2021\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\webapps\""
-        tomcatBinLocation="\"D:\\Zartab\\Trainings\\DXC Jenkins Training Nov 2021\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\bin\""
-        buildLocation="C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\dxc-deploy-to-tomcat-pipeline\\mywebapp\\target\\mywebapp.war"
+        tomcatWebLocation="\"C:\\shalini backp\\trainings\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\webapps\""
+        tomcatBinLocation="\"C:\\shalini backp\\trainings\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\bin\""
+        buildLocation="C:\\ProgramData\\Jenkins\\.jenkins\workspace\\dxc-maven-build-test\\mywebapp\\target\\mywebapp.war"
     }
  
     stages{
