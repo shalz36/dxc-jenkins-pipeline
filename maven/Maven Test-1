@@ -2,7 +2,7 @@ pipeline{
 
     agent any
     	environment{
-	jarlocation = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\dxc-maven-test-pipeline-withgit\\target\my-app-1.0-SNAPSHOT.jar'
+	jarlocation = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\dxc-maven-test-pipeline-withgit\\target\\my-app-1.0-SNAPSHOT.jar'
 
 }
    tools{
