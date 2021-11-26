@@ -7,7 +7,7 @@ pipeline{
     environment{
         tomcatWebLocation="\"C:\\shalini backp\\trainings\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\webapps\""
         tomcatBinLocation="\"C:\\shalini backp\\trainings\\apache-tomcat-9.0.55\\apache-tomcat-9.0.55\\bin\""
-        buildLocation="C:\\ProgramData\\Jenkins\\.jenkins\workspace\\dxc-maven-build-test\\mywebapp\\target\\mywebapp.war"
+        buildLocation="C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\dxc-maven-build-test\\mywebapp\\target\\mywebapp.war"
     }
  
     stages{
